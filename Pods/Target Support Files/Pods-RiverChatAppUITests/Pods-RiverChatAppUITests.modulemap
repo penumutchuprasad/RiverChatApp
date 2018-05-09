@@ -1,0 +1,6 @@
+framework module Pods_RiverChatAppUITests {
+  umbrella header "Pods-RiverChatAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
