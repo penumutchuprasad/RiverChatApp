@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9CF70C51450256C8C22662 /* Pods_RiverChatAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62E6C5176444DB48C435681 /* Pods_RiverChatAppTests.framework */; };
 		5B10E707209CA56F00D8D4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E706209CA56F00D8D4C8 /* AppDelegate.swift */; };
-		5B10E709209CA56F00D8D4C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E708209CA56F00D8D4C8 /* ViewController.swift */; };
+		5B10E709209CA56F00D8D4C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E708209CA56F00D8D4C8 /* LoginViewController.swift */; };
 		5B10E70C209CA56F00D8D4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B10E70A209CA56F00D8D4C8 /* Main.storyboard */; };
 		5B10E70F209CA56F00D8D4C8 /* RiverChatApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E70D209CA56F00D8D4C8 /* RiverChatApp.xcdatamodeld */; };
 		5B10E711209CA57000D8D4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B10E710209CA57000D8D4C8 /* Assets.xcassets */; };
 		5B10E714209CA57000D8D4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B10E712209CA57000D8D4C8 /* LaunchScreen.storyboard */; };
 		5B10E71F209CA57100D8D4C8 /* RiverChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E71E209CA57100D8D4C8 /* RiverChatAppTests.swift */; };
 		5B10E72A209CA57100D8D4C8 /* RiverChatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E729209CA57100D8D4C8 /* RiverChatAppUITests.swift */; };
+		5B10E738209CAB7900D8D4C8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E737209CAB7900D8D4C8 /* ChatViewController.swift */; };
+		5B10E73A209D868900D8D4C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B10E739209D868900D8D4C8 /* GoogleService-Info.plist */; };
+		5B10E740209D970100D8D4C8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E73F209D970100D8D4C8 /* Helpers.swift */; };
+		5B10E742209E038300D8D4C8 /* SlackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B10E741209E038300D8D4C8 /* SlackVC.swift */; };
+		B55CEA434391B67E958F37DB /* Pods_RiverChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F0B80F70F9EEFBD4601F5C /* Pods_RiverChatApp.framework */; };
+		C82418F2691222C5AD09C6AD /* Pods_RiverChatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488326C4E2C2FC5108FF4272 /* Pods_RiverChatAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00B1DAD9E43C9DEB6075B17E /* Pods-RiverChatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverChatAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverChatAppTests/Pods-RiverChatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		05D149C86FBCA6BEF15AF753 /* Pods-RiverChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverChatApp/Pods-RiverChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2400DDFB9DF76557B8269D5A /* Pods-RiverChatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverChatAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverChatAppTests/Pods-RiverChatAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D4E20EBEF29105B6A465837 /* Pods-RiverChatAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverChatAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiverChatAppUITests/Pods-RiverChatAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		32F0B80F70F9EEFBD4601F5C /* Pods_RiverChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		488326C4E2C2FC5108FF4272 /* Pods_RiverChatAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverChatAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B10E703209CA56F00D8D4C8 /* RiverChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B10E706209CA56F00D8D4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B10E708209CA56F00D8D4C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B10E708209CA56F00D8D4C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5B10E70B209CA56F00D8D4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B10E70E209CA56F00D8D4C8 /* RiverChatApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RiverChatApp.xcdatamodel; sourceTree = "<group>"; };
 		5B10E710209CA57000D8D4C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +62,13 @@
 		5B10E725209CA57100D8D4C8 /* RiverChatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverChatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B10E729209CA57100D8D4C8 /* RiverChatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverChatAppUITests.swift; sourceTree = "<group>"; };
 		5B10E72B209CA57100D8D4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B10E737209CAB7900D8D4C8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		5B10E739209D868900D8D4C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B10E73F209D970100D8D4C8 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		5B10E741209E038300D8D4C8 /* SlackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackVC.swift; sourceTree = "<group>"; };
+		B62E6C5176444DB48C435681 /* Pods_RiverChatAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverChatAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD48893B73063118E105EDA9 /* Pods-RiverChatAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverChatAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverChatAppUITests/Pods-RiverChatAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F68D8954F24F7BEEE2B4B443 /* Pods-RiverChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiverChatApp/Pods-RiverChatApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55CEA434391B67E958F37DB /* Pods_RiverChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9CF70C51450256C8C22662 /* Pods_RiverChatAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +92,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82418F2691222C5AD09C6AD /* Pods_RiverChatAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A65E8B767EC28072F5B07A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05D149C86FBCA6BEF15AF753 /* Pods-RiverChatApp.debug.xcconfig */,
+				F68D8954F24F7BEEE2B4B443 /* Pods-RiverChatApp.release.xcconfig */,
+				00B1DAD9E43C9DEB6075B17E /* Pods-RiverChatAppTests.debug.xcconfig */,
+				2400DDFB9DF76557B8269D5A /* Pods-RiverChatAppTests.release.xcconfig */,
+				2D4E20EBEF29105B6A465837 /* Pods-RiverChatAppUITests.debug.xcconfig */,
+				DD48893B73063118E105EDA9 /* Pods-RiverChatAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1244BA7E5E53DF495AFB462E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32F0B80F70F9EEFBD4601F5C /* Pods_RiverChatApp.framework */,
+				B62E6C5176444DB48C435681 /* Pods_RiverChatAppTests.framework */,
+				488326C4E2C2FC5108FF4272 /* Pods_RiverChatAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B10E6FA209CA56F00D8D4C8 = {
 			isa = PBXGroup;
 			children = (
+				5B10E739209D868900D8D4C8 /* GoogleService-Info.plist */,
 				5B10E705209CA56F00D8D4C8 /* RiverChatApp */,
 				5B10E71D209CA57100D8D4C8 /* RiverChatAppTests */,
 				5B10E728209CA57100D8D4C8 /* RiverChatAppUITests */,
 				5B10E704209CA56F00D8D4C8 /* Products */,
+				0A65E8B767EC28072F5B07A1 /* Pods */,
+				1244BA7E5E53DF495AFB462E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +148,11 @@
 		5B10E705209CA56F00D8D4C8 /* RiverChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				5B10E73E209D96D900D8D4C8 /* Utilities */,
+				5B10E73D209D96CE00D8D4C8 /* Controller */,
+				5B10E73C209D96C700D8D4C8 /* View */,
+				5B10E73B209D96BC00D8D4C8 /* Model */,
 				5B10E706209CA56F00D8D4C8 /* AppDelegate.swift */,
-				5B10E708209CA56F00D8D4C8 /* ViewController.swift */,
 				5B10E70A209CA56F00D8D4C8 /* Main.storyboard */,
 				5B10E710209CA57000D8D4C8 /* Assets.xcassets */,
 				5B10E712209CA57000D8D4C8 /* LaunchScreen.storyboard */,
@@ -128,6 +180,38 @@
 			path = RiverChatAppUITests;
 			sourceTree = "<group>";
 		};
+		5B10E73B209D96BC00D8D4C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B10E73C209D96C700D8D4C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B10E741209E038300D8D4C8 /* SlackVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B10E73D209D96CE00D8D4C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B10E708209CA56F00D8D4C8 /* LoginViewController.swift */,
+				5B10E737209CAB7900D8D4C8 /* ChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B10E73E209D96D900D8D4C8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5B10E73F209D970100D8D4C8 /* Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B10E72E209CA57100D8D4C8 /* Build configuration list for PBXNativeTarget "RiverChatApp" */;
 			buildPhases = (
+				FF4E184366A8F738C45A9525 /* [CP] Check Pods Manifest.lock */,
 				5B10E6FF209CA56F00D8D4C8 /* Sources */,
 				5B10E700209CA56F00D8D4C8 /* Frameworks */,
 				5B10E701209CA56F00D8D4C8 /* Resources */,
+				869ECCAF554C973BB63F5E89 /* [CP] Embed Pods Frameworks */,
+				CB8C53FE716D728D53B5FA90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B10E731209CA57100D8D4C8 /* Build configuration list for PBXNativeTarget "RiverChatAppTests" */;
 			buildPhases = (
+				49721BFD8FF566592C9BBF54 /* [CP] Check Pods Manifest.lock */,
 				5B10E716209CA57100D8D4C8 /* Sources */,
 				5B10E717209CA57100D8D4C8 /* Frameworks */,
 				5B10E718209CA57100D8D4C8 /* Resources */,
@@ -170,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B10E734209CA57100D8D4C8 /* Build configuration list for PBXNativeTarget "RiverChatAppUITests" */;
 			buildPhases = (
+				63EF8F2C729C0FCE2B7D184C /* [CP] Check Pods Manifest.lock */,
 				5B10E721209CA57100D8D4C8 /* Sources */,
 				5B10E722209CA57100D8D4C8 /* Frameworks */,
 				5B10E723209CA57100D8D4C8 /* Resources */,
@@ -233,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B10E714209CA57000D8D4C8 /* LaunchScreen.storyboard in Resources */,
+				5B10E73A209D868900D8D4C8 /* GoogleService-Info.plist in Resources */,
 				5B10E711209CA57000D8D4C8 /* Assets.xcassets in Resources */,
 				5B10E70C209CA56F00D8D4C8 /* Main.storyboard in Resources */,
 			);
@@ -254,14 +344,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49721BFD8FF566592C9BBF54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RiverChatAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63EF8F2C729C0FCE2B7D184C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RiverChatAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		869ECCAF554C973BB63F5E89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RiverChatApp/Pods-RiverChatApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverChatApp/Pods-RiverChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB8C53FE716D728D53B5FA90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RiverChatApp/Pods-RiverChatApp-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiverChatApp/Pods-RiverChatApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4E184366A8F738C45A9525 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RiverChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B10E6FF209CA56F00D8D4C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5B10E70F209CA56F00D8D4C8 /* RiverChatApp.xcdatamodeld in Sources */,
-				5B10E709209CA56F00D8D4C8 /* ViewController.swift in Sources */,
+				5B10E709209CA56F00D8D4C8 /* LoginViewController.swift in Sources */,
+				5B10E738209CAB7900D8D4C8 /* ChatViewController.swift in Sources */,
+				5B10E740209D970100D8D4C8 /* Helpers.swift in Sources */,
 				5B10E707209CA56F00D8D4C8 /* AppDelegate.swift in Sources */,
+				5B10E742209E038300D8D4C8 /* SlackVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,15 +626,13 @@
 		};
 		5B10E72F209CA57100D8D4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D149C86FBCA6BEF15AF753 /* Pods-RiverChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q783J47277;
 				INFOPLIST_FILE = RiverChatApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abn.RiverChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -450,15 +642,13 @@
 		};
 		5B10E730209CA57100D8D4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68D8954F24F7BEEE2B4B443 /* Pods-RiverChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q783J47277;
 				INFOPLIST_FILE = RiverChatApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abn.RiverChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -468,17 +658,14 @@
 		};
 		5B10E732209CA57100D8D4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00B1DAD9E43C9DEB6075B17E /* Pods-RiverChatAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q783J47277;
 				INFOPLIST_FILE = RiverChatAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abn.RiverChatAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -489,17 +676,14 @@
 		};
 		5B10E733209CA57100D8D4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2400DDFB9DF76557B8269D5A /* Pods-RiverChatAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q783J47277;
 				INFOPLIST_FILE = RiverChatAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abn.RiverChatAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -510,16 +694,13 @@
 		};
 		5B10E735209CA57100D8D4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D4E20EBEF29105B6A465837 /* Pods-RiverChatAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q783J47277;
 				INFOPLIST_FILE = RiverChatAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abn.RiverChatAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -530,16 +711,13 @@
 		};
 		5B10E736209CA57100D8D4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD48893B73063118E105EDA9 /* Pods-RiverChatAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q783J47277;
 				INFOPLIST_FILE = RiverChatAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = abn.RiverChatAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
