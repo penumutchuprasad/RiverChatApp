@@ -21,22 +21,65 @@ class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     var rootRef = Database.database().reference()
     lazy var msgRef = rootRef.child("messages")
+    
+    var photoCache = NSCache<AnyObject, AnyObject>()
 
 
+    var avatars = [String : JSQMessagesAvatarImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let curntUser = Auth.auth().currentUser {
-            
+
             self.senderId = curntUser.uid
-            self.senderDisplayName = "PRASAD"
+            
+            if curntUser.isAnonymous == true {
+                self.senderDisplayName = "Anonymous"
+            }else{
+                self.senderDisplayName = curntUser.displayName
+            }
+
             observeMessages()
         }
         
     }
-
     
+    func observeUsers(id: String) {
+        
+        Database.database().reference().child("users").observe(.value) { (snpshot) in
+            
+            print(snpshot.value)
+            
+            if let dict = snpshot.value as? [String: String] {
+                let avatarURL = dict["profileURL"] as! String
+                self.setupAvatar(url: avatarURL, msgId: id)
+            }
+            
+        }
+        
+    }
+
+    func setupAvatar(url: String, msgId: String) {
+        
+        if url != "aaa" {
+            
+            let img = UIImage.init(data: try! Data.init(contentsOf: URL.init(string: url)!))
+            let avatarImg = JSQMessagesAvatarImageFactory.avatarImage(with: img, diameter: 30)
+            
+            avatars[msgId] = avatarImg
+            
+        }else{
+            
+            let img = #imageLiteral(resourceName: "GglBtn")
+            let avatarImg = JSQMessagesAvatarImageFactory.avatarImage(with: img, diameter: 30)
+            
+            avatars[msgId] = avatarImg
+            
+        }
+        
+        collectionView.reloadData()
+    }
     
     @IBAction func onLogOut_TouchupInside(_ sender: UIBarButtonItem) {
         
@@ -104,6 +147,9 @@ class ChatViewController: JSQMessagesViewController {
                 let sendrName = dict["senderName"]
                 let mediaType = dict["mediaType"]
                 
+                self.observeUsers(id: sendrID!)
+
+                
                 if mediaType == "TEXT" {
                     
                     let txt = dict["text"]
@@ -115,21 +161,37 @@ class ChatViewController: JSQMessagesViewController {
                     
                     if let data = try? Data.init(contentsOf: URL.init(string: imgURL)!) as? Data {
                         
-                        if let photo = UIImage.init(data: data!) {
-                            let media = JSQPhotoMediaItem.init(image: photo)
-                            self.messages.append(JSQMessage.init(senderId: sendrID, displayName: sendrName, media: media))
+                        
+                        if let img = self.photoCache.object(forKey: imgURL as AnyObject) as? JSQPhotoMediaItem {
+                            print("okkkk img")
+                            self.messages.append(JSQMessage.init(senderId: sendrID, displayName: sendrName, media: img))
                             
-                            if self.senderId == sendrID {
-                                media?.appliesMediaViewMaskAsOutgoing = true
-                            }else{
-                                media?.appliesMediaViewMaskAsOutgoing = false
-
+                            DispatchQueue.main.async {
+                                self.collectionView.reloadData()
                             }
+
+                        }else{
+                            
+                            DispatchQueue.global(qos: .default).async {
+                                
+                                if let photo = UIImage.init(data: data!) {
+                                    let media = JSQPhotoMediaItem.init(image: photo)
+                                    self.photoCache.setObject(media!, forKey: imgURL as AnyObject)
+                                    self.messages.append(JSQMessage.init(senderId: sendrID, displayName: sendrName, media: media))
+                                    
+                                    if self.senderId == sendrID {
+                                        media?.appliesMediaViewMaskAsOutgoing = true
+                                    }else{
+                                        media?.appliesMediaViewMaskAsOutgoing = false
+                                        
+                                    }
+                                }
+                                DispatchQueue.main.async {
+                                    self.collectionView.reloadData()
+                                }
+                            }
+                            
                         }
-//                        else {
-//                            let media = JSQPhotoMediaItem.init(image: UIImage.init(named: "GglBtn"))
-//                            self.messages.append(JSQMessage.init(senderId: sendrID, displayName: sendrName, media: media))
-//                        }
                         
                         
                     }
@@ -236,7 +298,10 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
-        return JSQMessagesAvatarImage.avatar(with: #imageLiteral(resourceName: "GglBtn"))
+        
+        let msg = messages[indexPath.item]
+        return avatars[msg.senderId]
+        //return JSQMessagesAvatarImageFactory.avatarImage(with: UIImage.init(named: "GglBtn"), diameter: 30)
     }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, didTapMessageBubbleAt indexPath: IndexPath!) {

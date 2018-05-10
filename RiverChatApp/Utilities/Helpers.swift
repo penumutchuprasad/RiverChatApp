@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import GoogleSignIn
+import FirebaseDatabase
 
 class MyAppAuth {
     
@@ -28,7 +29,14 @@ class MyAppAuth {
             let uid = user.uid
             
             print(isAnonymous)
-            print(uid)
+//            print(uid)
+            
+            let newUser = Database.database().reference().child("users")
+            
+            let newDict = ["displayName" : "Anonymous User", "id" : "\(String(describing: uid))", "profileURL" : "aaa"]
+            
+            newUser.setValue(newDict)
+            
             completion()
             
         }
@@ -49,9 +57,16 @@ class MyAppAuth {
             }else {
                 //Success...
                 
-                print(user?.email)
-                print(user?.displayName)
+//                print(user?.email)
+//                print(user?.displayName)
+//                print(user?.photoURL)
+                guard let user = user else {return}
+
+                let newUser = Database.database().reference().child("Users").child((user.uid))
+
+                let newDict = ["displayName" : "\(String(describing: user.displayName!))", "id": "\(String(describing: user.uid))", "profileURL": "\(String(describing:  user.photoURL!))"]
                 
+                newUser.setValue(newDict)
                 completion()
                 
             }

@@ -9,6 +9,7 @@
 import UIKit
 import GoogleSignIn
 import FirebaseAuth
+import FirebaseDatabase
 
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
@@ -76,8 +77,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     @IBAction func onGoogleBtn_TouchUpInside(_ sender: UIButton) {
         
         GIDSignIn.sharedInstance().signIn()
-        
-       
         
     }
     
